@@ -1,0 +1,18 @@
+<!Doctype html>
+<html>
+<head><title>test cookie</title></head>
+<body>
+	 <p id="demo"></p>
+	 <input id="name" type="text">Enter Name</input>
+	 <a href="cookie2.html" ><button onclick="myFunction()">Click me</button></a>
+	<script>
+	function myFunction() {
+	    var person = document.getElementById('name').value;
+	    if (person != null) {
+	        document.cookie = "username=john";
+	    }
+	}
+	</script>
+	
+</body>
+</html>

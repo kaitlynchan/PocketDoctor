@@ -1,0 +1,183 @@
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=yes, initial-scale=1, maximum-scale=12.0, minimum-scale=.25, width=device-width" />
+    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+    <!-- Good default declaration:
+    * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+    * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+    * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+        * Enable inline JS: add 'unsafe-inline' to default-src
+        * Enable eval(): add 'unsafe-eval' to default-src
+    * Create your own at http://cspisawesome.com
+    -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" type="text/css" href="css/disease.css" />
+
+    <title>Pocket Doctor</title>
+
+
+</head>
+<style type="text/css">
+
+
+</style>
+
+<body>
+
+   <div class="header">
+        <h1><div id="mySidenav" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <a href="menu.html">Home</a>
+          <a href="settings.html">Settings</a>
+          <a href="about.html">About</a>
+          <a href="finddoctor.html">Find a Doctor</a>
+          </div>
+        
+     <span class = "bar" style="font-size:25px;" onclick="openNav()">☰</span>
+        
+         Pocket Doctor <a href="finddoctor.html"><img style = "width: 40px" align="top" src="./img/world.png"></a></h1>
+
+    </div>
+
+     <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+<div id="main">
+
+
+<h1> FIRST AID  </h1> <br>
+<div class ="infograph">
+<p> <img src="./img/wounds.png"></p>
+  <div id = "aud1" data-language = "Hindi" style="display:none">
+  <h4> Hindi</h4>
+  <audio controls>
+      <source src="Audio/Infant Care Hindi.m4a" type="audio/mpeg">
+  </audio>
+  </div>
+
+  <div id = "aud2" data-language = "French" style="display:none">
+  <h4> French</h4>
+  <audio controls>
+      <source src="Audio/Cleaning Wounds French.m4a" type="audio/mpeg">
+  </audio>
+  </div>
+
+  <div id = "aud3" data-language = "English" style="display:none">
+  <h4>English</h4>
+  <audio controls>
+      <source src="Audio/Clean Wound English.m4a" type="audio/mpeg">
+  </audio>
+  </div>
+<br><br>
+
+<p><img src="./img/burns.png" ></p>
+
+  <div id = "aud4" data-language = "Hindi" style="display:none">
+  <h4> Hindi</h4>
+  <audio controls>
+      <source src="Audio/Infant Care Hindi.m4a" type="audio/mpeg">
+  </audio>
+  </div>
+
+  <div id = "aud5" data-language = "French" style="display:none">
+  <h4> French</h4>
+  <audio controls>
+      <source src="Audio/Baby Infant Care French.m4a" type="audio/mpeg">
+  </audio>
+  </div>
+
+  <div id = "aud6" data-language = "English" style="display:none">
+  <h4>English</h4>
+  <audio controls>
+      <source src="Audio/Tend To Burns English.m4a" type="audio/mpeg">
+  </audio>
+  </div>
+<br><br>
+
+<p><img src="./img/concussioncare.png"></p>
+  <div id = "aud7" data-language = "Hindi" style="display:none">
+  <h4> Hindi</h4>
+  <audio controls>
+      <source src="Audio/Infant Care Hindi.m4a" type="audio/mpeg">
+  </audio>
+  </div>
+
+  <div id = "aud8" data-language = "French" style="display:none">
+  <h4> French</h4>
+  <audio controls>
+      <source src="Audio/Baby Infant Care French.m4a" type="audio/mpeg">
+  </audio>
+  </div>
+
+  <div id = "aud9" data-language = "English" style="display:none">
+  <h4>English</h4>
+  <audio controls>
+      <source src="Audio/Concussion English.m4a" type="audio/mpeg">
+  </audio>
+  </div>
+<br><br>
+
+<p><img src="./img/heat.png"></p>
+<div id = "aud10" data-language = "Hindi" style="display:none">
+  <h4> Hindi</h4>
+  <audio controls>
+      <source src="Audio/Infant Care Hindi.m4a" type="audio/mpeg">
+  </audio>
+  </div>
+
+  <div id = "aud11" data-language = "French" style="display:none">
+  <h4> French</h4>
+  <audio controls>
+      <source src="Audio/Baby Infant Care French.m4a" type="audio/mpeg">
+  </audio>
+  </div>
+
+  <div id = "aud12" data-language = "English" style="display:none">
+  <h4>English</h4>
+  <audio controls>
+      <source src="Audio/Hear Exhaustion English.m4a" type="audio/mpeg">
+  </audio>
+  </div>
+<br><br>
+
+<p><img src="./img/bite.png"></p>
+<div id = "aud13" data-language = "Hindi" style="display:none">
+  <h4> Hindi</h4>
+  <audio controls>
+      <source src="Audio/Infant Care Hindi.m4a" type="audio/mpeg">
+  </audio>
+  </div>
+
+  <div id = "aud14" data-language = "French" style="display:none">
+  <h4> French</h4>
+  <audio controls>
+      <source src="Audio/Baby Infant Care French.m4a" type="audio/mpeg">
+  </audio>
+  </div>
+
+  <div id = "aud15" data-language = "English" style="display:none">
+  <h4>English</h4>
+  <audio controls>
+      <source src="Audio/Animal Bites English.m4a" type="audio/mpeg">
+  </audio>
+  </div>
+<br><br>
+
+</div>
+
+</div>
+
+    <script type="text/javascript"src="js/language.js"></script> 
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/disease.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+<!Doctype html>
+<html><head><TITLE>hi</TITLE></head><body>
+<p>Cookie Name: </p> 
+
+<input type="checkbox" id="language" name="language" value = "Language" /> Language<br>
+
+
+Cookie Value(Language):<input type="radio" id="English" name="language" value = "English" /> English<br>
+<input type="radio" id="French" name="language" value = "French" /> French<br>
+<input type="radio" id="Hindi" name="language" value = "Hindi" /> Hindi<br>
+
+<input type="button" value="Add" onClick="addCookie()" />
+<!-- <input type="button" value="View" onClick="showCookie(document.getElementById('cName').value)" /> -->
+<!-- <input type="button" value="Delete" onClick="eraseCookie(document.getElementById('cName').value)" />
+ -->
+<script type="text/javascript">
+function createCookie(name,value,days) {
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime()+(days*24*60*60*1000));
+        var expires = "; expires="+date.toGMTString();
+    }
+    else var expires = "";
+    document.cookie = name+"="+value+expires+"; path=/";
+    return true;
+}
+
+function readCookie(name) {
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1,c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+}
+
+
+
+function addCookie()
+{
+	if(document.getElementById('English').checked) {
+		cookie_value = document.getElementById("English").value.replace(/^\s+|\s+$/g,'');
+		alert("Cookie is English");
+
+  
+	}else if(document.getElementById('French').checked) {
+		cookie_value = document.getElementById("French").value.replace(/^\s+|\s+$/g,'');
+		alert("Cookie is French");
+	  
+	}
+	else if(document.getElementById('Hindi').checked) {
+		cookie_value = document.getElementById("Hindi").value.replace(/^\s+|\s+$/g,'');
+		alert("Cookie is Hindi");
+	  
+	}
+    cookie_name = document.getElementById("language").value.replace(/^\s+|\s+$/g,'');
+   
+    if(cookie_name.length && cookie_value.length){
+        createCookie(cookie_name, cookie_value, 7);
+        alert("New cookie has been added, \ncookie name : " + cookie_name + "\ncookie value : " + cookie_value);
+    }
+    else{
+        alert("Please enter a name and value for the cookie.");
+    }
+}
+
+
+</script>
+</body>
+</html>
