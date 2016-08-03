@@ -1,7 +1,7 @@
 
 Synopsis
 
-This is the final project for Girls Who Code Summer Immersion Program 2016 hosted at Pivotal | Team Members: Priya and Kaitlyn | 
+This is the final project for Girls Who Code Summer Immersion Program 2016 hosted at Pivotal | Team Members: Priya Koliwad and Kaitlyn Chan | 
 Goal: create an app to teach basic health care to people in deveopling nations.
 
 Code Example
